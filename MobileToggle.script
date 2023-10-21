@@ -1,4 +1,5 @@
-function mobile_toggle()
+local mobile_toggle = {}
+function mobile_toggle:add(Image)
     local ScreenGui = Instance.new("ScreenGui")
     local ImageButton = Instance.new("ImageButton")
     ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
@@ -10,10 +11,10 @@ function mobile_toggle()
     ImageButton.Size = UDim2.new(0, 80, 0, 80)
     ImageButton.Draggable = true
     ImageButton.BackgroundTransparency = 1
-    ImageButton.Image = "rbxassetid://15110884615"
+    ImageButton.Image = Image
     ImageButton.MouseButton1Down:connect(function()
         game:GetService("VirtualInputManager"):SendKeyEvent(true,127,false,game)
         game:GetService("VirtualInputManager"):SendKeyEvent(false,127,false,game)
     end)
 end
-mobile_toggle()
+return mobile_toggle
