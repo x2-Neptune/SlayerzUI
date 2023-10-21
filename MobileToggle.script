@@ -1,5 +1,5 @@
 local mobile_toggle = {}
-function mobile_toggle:add(Image)
+function mobile_toggle:Add(Image)
     local ScreenGui = Instance.new("ScreenGui")
     local ImageButton = Instance.new("ImageButton")
     ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
