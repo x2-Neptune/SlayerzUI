@@ -17,4 +17,4 @@ function MobileToggle:Create(ImageSet)
         game:GetService("VirtualInputManager"):SendKeyEvent(false,127,false,game)
     end)
 end
-return mobile_toggle
+return MobileToggle
