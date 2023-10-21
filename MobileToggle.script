@@ -1,5 +1,5 @@
-local mobile_toggle = {}
-function mobile_toggle:Add(Image)
+local MobileToggle = {}
+function MobileToggle:Create(ImageSet)
     local ScreenGui = Instance.new("ScreenGui")
     local ImageButton = Instance.new("ImageButton")
     ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
@@ -11,7 +11,7 @@ function mobile_toggle:Add(Image)
     ImageButton.Size = UDim2.new(0, 80, 0, 80)
     ImageButton.Draggable = true
     ImageButton.BackgroundTransparency = 1
-    ImageButton.Image = Image
+    ImageButton.Image = ImageSet
     ImageButton.MouseButton1Down:connect(function()
         game:GetService("VirtualInputManager"):SendKeyEvent(true,127,false,game)
         game:GetService("VirtualInputManager"):SendKeyEvent(false,127,false,game)
